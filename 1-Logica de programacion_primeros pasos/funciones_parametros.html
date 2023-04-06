@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con parametros</title>
+</head>
+<body>
+    <script>
+
+        function saltarLinea() { //creación de función salto de linea.
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+
+
+        }
+
+        function imprimir(frase) { //Creación de la función imprimir
+
+            document.write(frase)
+            saltarLinea();         //Llama a la función y la guarda
+
+        }
+
+        let anho = 2022;
+
+        imprimir("Hola mundo Js");
+
+        //Calcula las edad de Ximena, Andrea y Karla 
+
+        imprimir("Ximena tiene: " + (anho - 1999) + " años");
+        
+        imprimir("Andrea tiene: " + (anho - 2005) + " años");
+
+        imprimir("Karla tiene: " + (anho - 1981) + " años");
+
+    </script>
+</body>
+</html>

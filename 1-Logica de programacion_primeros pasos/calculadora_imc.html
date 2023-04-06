@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa IMC</title>
+</head>
+<body>
+    <script>
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase)
+            saltarLinea();
+
+        }
+
+        //Creación calculadora de imc
+        function calculadoraImc(peso,altura) {
+
+            imc = peso / (altura * altura);
+            return(imc);
+
+        }
+
+        pesoCristian = 71;
+        alturaCristian = 1.65;
+        //imcCristian = pesoCristian / (alturaCristian * alturaCristian);
+        imcCristian = calculadoraImc(pesoCristian,alturaCristian);
+        imprimir("El imc de Cristian es: " + imcCristian);
+
+        pesoAna = 65;
+        alturaAna = 1.60;
+        imcAna = calculadoraImc(pesoAna,alturaAna);
+        imprimir("El IMC de Ana es: " + imcAna);
+
+        //Creación de calculadora imc más eficiente
+        function calcularImc(peso,altura,nombre) {
+
+            imc = peso / (altura * altura);
+            imprimir("El imc calculado de " + nombre + " es " + imc);
+
+        }
+
+        calcularImc(71,1.72,"Felipe");
+        calcularImc(75,1.73,"Tania");
+
+    </script>
+</body>
+</html>
