@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC Mejorado</title>
+</head>
+<body>
+    <script>
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase)
+            saltarLinea();
+
+        }
+
+        //Creación calculadora de imc
+        function calculadoraImc(peso,altura) {
+
+            return (peso / (altura * altura));
+
+        }
+
+        nombre = prompt("Escriba su nombre");
+        pesoReal = prompt(nombre + ", informe su peso: ");
+        alturaReal = prompt(nombre + ", informe su altura: ");
+
+        imcResultado = calculadoraImc(pesoReal,alturaReal);
+        imprimir(nombre + ", el imc calculado es: " + imcResultado);
+
+        //Condición if
+        if (imcResultado < 18.5) {
+
+            imprimir(nombre + ", se encuentra en insuficiencia ponderal");
+        }
+
+        if (imcResultado >= 18.5) {
+            if(imcResultado < 25) {
+            imprimir(nombre + ", se encuentra en intervalo normal");
+            }
+        }
+
+        if (imcResultado >= 25.0) {
+
+            if(imcResultado < 29.9) {
+
+            imprimir(nombre + ", se encuentra en sobrepeso");
+
+            }
+        }
+        
+        if (imcResultado >= 30.0) {
+
+            imprimir(nombre + ", se encuentra en Obesidad");
+        }
+
+    </script>
+</body>
+</html>

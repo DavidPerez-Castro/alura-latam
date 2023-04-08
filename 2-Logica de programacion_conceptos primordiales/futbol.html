@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol</title>
+</head>
+<body>
+    <script>
+
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarLinea();
+
+        }
+
+        //Conviertiendo string a numero
+        let victorias = parseInt(prompt("Cantidad de victorias"));
+        let empates = parseInt(prompt("Cantidad de empates"));
+
+        let puntosTotal = (victorias * 3) + empates;
+        imprimir("Total de puntos del equipo es: " + puntosTotal);
+
+    </script>
+</body>
+</html>
